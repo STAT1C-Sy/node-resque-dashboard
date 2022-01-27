@@ -1,0 +1,58 @@
+{
+  "name": "node-resque-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard for node-resque",
+  "main": "app.js",
+  "scripts": {
+    "test": "cross-env TS_NODE_PROJECT=\"./tsconfig.json\" && mocha -r ts-node/register ./src/test/specs/**/*.test.ts --timeout 0 --exit --bail",
+    "singletest": "cross-env TS_NODE_PROJECT=\"./tsconfig.json\" && mocha -r ts-node/register --timeout 0 --exit --bail",
+    "devstart": "tsc-watch --onSuccess \"node ./dist/src/app.js\"",
+    "build": "tsc",
+    "start": "node ./dist/src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gruppe-NoSQL/nosql-quiz-backend.git"
+  },
+  "author": "CORE Development",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gruppe-NoSQL/nosql-quiz-backend/issues"
+  },
+  "homepage": "",
+  "dependencies": {
+    "@sentry/node": "^6.10.0",
+    "@sentry/tracing": "^6.10.0",
+    "@types/bluebird": "^3.5.35",
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/connect-timeout": "0.0.34",
+    "@types/cors": "^2.8.6",
+    "@types/ioredis": "^4.28.7",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^13.11.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "connect-timeout": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.28.2",
+    "morgan": "^1.10.0",
+    "node-resque": "^9.1.3",
+    "readline": "^1.3.0",
+    "ts-node": "^8.8.2",
+    "tsc-watch": "^4.2.3",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.20",
+    "@types/mocha": "^9.0.0",
+    "@types/supertest": "^2.0.11",
+    "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "mocha": "^9.0.2",
+    "supertest": "^6.1.3"
+  }
+}
